@@ -23,7 +23,7 @@ $ npm install vue-template-pre-loader-with-mark --save-dev
 # result
 
 ```html 
-<div __template_path="/src/component.vue" __location="0">
+<div __template_path="/src/component.vue" __location_root>
     <div __location="0.0" class="pagination__overlay"></div> 
     <div __location="0.1" class="commerce-layout-wrapper">
         <div __location="0.1.0"></div>

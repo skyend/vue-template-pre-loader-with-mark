@@ -31,7 +31,7 @@ function appendSpecialAttrChildrenRecv(_node, _loc){
     } else {
         node.attrs = node.attrs || [];
         node.attrs.push({
-            name : '__super_location', value : loc,
+            name : '__location_root', value : '',
         });
     }
 
