@@ -31,13 +31,14 @@ function appendSpecialAttrChildrenRecv(_node, _loc){
 
     if( node.childNodes ){
         var index = 0;
+        var childNode;
         for(var i = 0; i < node.childNodes.length ; i++ ){
-            node = node.childNodes[i];
+            childNode = node.childNodes[i];
 
-            if( node.nodeName === '#comment' || node.nodeName === '#text' ){
+            if( childNode.nodeName === '#comment' || childNode.nodeName === '#text' ){
                 continue;
             }
-            appendSpecialAttrChildrenRecv(node, loc + '.' + index);
+            appendSpecialAttrChildrenRecv(childNode, loc + '.' + index);
             index++;
         }
     }
