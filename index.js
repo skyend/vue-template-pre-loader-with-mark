@@ -23,11 +23,17 @@ module.exports = function(source) {
 function appendSpecialAttrChildrenRecv(_node, _loc){
     var node = _node;
     var loc = _loc === undefined ? '0' : _loc;
-
-    node.attrs = node.attrs || [];
-    node.attrs.push({
-        name : '__location', value : loc,
-    });
+    if( loc !== '0'){
+        node.attrs = node.attrs || [];
+        node.attrs.push({
+            name : '__location', value : loc,
+        });
+    } else {
+        node.attrs = node.attrs || [];
+        node.attrs.push({
+            name : '__super_location', value : loc,
+        });
+    }
 
     if( node.childNodes ){
         var index = 0;
