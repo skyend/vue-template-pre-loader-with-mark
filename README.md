@@ -13,7 +13,19 @@ $ npm install vue-template-pre-loader-with-mark --save-dev
     loader: 'vue-loader',
     options: {  
         preLoaders : {
-            "html":"vue-pre-loader-trace"
+            "html":"vue-template-pre-loader-with-mark"
+        }
+    }
+}
+```
+
+```javascript
+{
+    test: /\.vue$/,
+    loader: 'vue-loader',
+    query: {  
+        preLoaders : {
+            "html":"vue-template-pre-loader-with-mark"
         }
     }
 }
